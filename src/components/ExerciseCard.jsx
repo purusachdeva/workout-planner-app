@@ -35,7 +35,7 @@ export default function ExerciseCard(props) {
       </div>
 
       <div className="flex flex-col cursor-pointer rounded bg-slate-900"><button onClick={handleShowDesc} className="flex items-center justify-between gap-2 p-2"><p>Description</p> <i className={`fa-solid + ${icon}`}></i></button> </div>
-
+      
       {showDesc && (<div className='flex flex-col bg-slate-950 rounded gap-2'>
         {exercise.description.split('___').map((val) => {
           return (
@@ -44,6 +44,9 @@ export default function ExerciseCard(props) {
             </div>
           )
         })}
+        <a className='text-sky-400' target="_blank" href={"https://www.youtube.com/results?search_query=" + exercise.name.replaceAll('_', ' ') + " exercise"}>
+                Video <i className="fa-solid fa-up-right-from-square"></i>
+        </a>
       </div>)}
 
 
