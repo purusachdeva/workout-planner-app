@@ -29,9 +29,14 @@ export default function ExerciseCard(props) {
         <h2 className='capitalize whitespace-nowrap truncate max-w-full text-lg sm:text-xl md:text-2xl flex-1 sm:text-center'>{exercise.name.replaceAll('_', ' ')}</h2>
         <p className='text-sm text-slate-400 capitalize'>{exercise.type}</p>
       </div>
-      <div className='flex flex-col'>
-        <h3 className='text-slate-400 text-sm'>Muscle groups</h3>
-        <p className='capitalize'>{exercise.muscles.join(' & ')}</p>
+      <div className='flex flex-row justify-between	'>
+        <div className='flex flex-col'>
+          <h3 className='text-slate-400 text-sm'>Muscle groups</h3>
+          <p className='capitalize'>{exercise.muscles.join(' & ')}</p>
+        </div>
+        <a className='text-sky-400' target="_blank" href={"https://www.youtube.com/results?search_query=" + exercise.name.replaceAll('_', ' ') + " exercise"}>
+                Video <i className="fa-solid fa-up-right-from-square"></i>
+        </a>
       </div>
 
       <div className="flex flex-col cursor-pointer rounded bg-slate-900"><button onClick={handleShowDesc} className="flex items-center justify-between gap-2 p-2"><p>Description</p> <i className={`fa-solid + ${icon}`}></i></button> </div>
@@ -44,9 +49,6 @@ export default function ExerciseCard(props) {
             </div>
           )
         })}
-        <a className='text-sky-400' target="_blank" href={"https://www.youtube.com/results?search_query=" + exercise.name.replaceAll('_', ' ') + " exercise"}>
-                Video <i className="fa-solid fa-up-right-from-square"></i>
-        </a>
       </div>)}
 
 
