@@ -7,9 +7,9 @@ import { generateWorkout } from './utils/functions'
 
 function App() {
   const [workout, setWorkout] = useState(null)
-  const [poison, setPoison] = useState('individual')
+  const [poison, setPoison] = useState(null)
   const [muscles, setMuscles] = useState([])
-  const [goal, setGoal] = useState('strength_power')
+  const [goal, setGoal] = useState(null)
 
   function updateWorkout() {
     if (muscles.length < 1) return
