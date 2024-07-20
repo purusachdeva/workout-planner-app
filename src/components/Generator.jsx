@@ -78,7 +78,7 @@ export default function Generator(props) {
                 <button onClick={() => {
                   updateMuscles(muscleGroup)
                 }} key={muscleGroupIndex} className={'hover:text-blue-400 duration-200' + (muscles.includes(muscleGroup) ? ' text-blue-400' : ' ')}>
-                  <p className='uppercase'>{muscleGroup.replaceAll('_', ' ')}</p>
+                  <p className='capitalize'>{muscleGroup.replaceAll('_', ' ')}</p>
                 </button>
               )
             })}
@@ -97,7 +97,7 @@ export default function Generator(props) {
           )
         })}
       </div>
-      <Button func={updateWorkout} text='Forumulate' />
+      <Button func={updateWorkout} text='Formulate' />
     </SectionWrapper>
   )
 }
